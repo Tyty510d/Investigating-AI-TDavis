@@ -1,6 +1,7 @@
 Investigating and Detecting AI-Generated Media
 Tyler Davis
 
+
 3 Pieces of AI Evidence
 
 -	Why Cell Phones Are Bad for Kids Under 14 (ChatGPT, AI)
@@ -38,6 +39,7 @@ The next two years in AI development will be characterized not just by technical
 
 3 Pieces of Real Evidence
 
+
 -	5 Reasons Your Kid Should Not Have a Cell Phone (EduBirdie, Human)
 
 https://edubirdie.com/examples/5-reasons-your-kid-should-not-have-a-cell-phone-persuasive-essay/ 
@@ -50,24 +52,33 @@ https://www.soundguys.com/5-reasons-not-to-buy-bluetooth-headphones-12150/
 
 https://medium.com/@TimGrillmeier/2-years-of-everyday-ai-whats-changed-and-where-are-we-at-96b0a47f7d4a
 
+
 Step 3: Brainstorm Specific Traits with AI
+
 
 1. Lack of Real-World Experience
 
 •	AI cannot include real-life experiences, personal observations, or emotions unless explicitly programmed to mimic them.
+
 •	If the essay feels detached from lived experiences or lacks authenticity, it might be AI-generated.
+
 
 2. Lack of Personal Voice and Style
 
 •	AI-generated text often lacks a unique or personal writing style.
+
 •	Sentences may feel generic, overly formal, or detached from human emotion.
+
 •	There may be an absence of personal anecdotes, opinions, or nuanced perspectives.
 
 3. Factual Errors or Misinterpretations
 
 •	AI sometimes generates incorrect or outdated information.
+
 •	It may misattribute quotes, make up sources, or reference events inaccurately.
+
 •	Citations and references might look plausible but may not exist in real academic work.
+
 
 I chose these three because they seem to line up with what would be most predictable by AI. AI can’t live through real life, and it doesn’t have an opinion like a human would. On top of these facts, it can only rely on information on the internet, which might not even be up to date.
 
@@ -81,11 +92,11 @@ from datetime import datetime
 from collections import Counter
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-# Ensure you have the required dependencies installed
-# Install them using:
-# pip install textstat vaderSentiment
+// Ensure you have the required dependencies installed
+// Install them using:
+// pip install textstat vaderSentiment
 
-# Initialize Sentiment Analyzer
+// Initialize Sentiment Analyzer
 analyzer = SentimentIntensityAnalyzer()
 
 def detect_formality(text):
@@ -140,75 +151,115 @@ if __name__ == "__main__":
     for key, value in analysis_results.items():
         print(f"{key}: {value}")
 
+
 Step 5: Run the Program and Test It
+
 
 -	Why Cell Phones Are Bad for Kids Under 14 (ChatGPT, AI)
 
 Analysis Results:
+
 •  Formality Score (Higher = More Formal): 12.0 
+
 •  Difficult Words Count: 91 
+
 •  Sentiment Score (-1 to 1): 0.9061 
+
 •  Generic Phrase Count: 0 
+
 •  Most Common Words: [('in', 11), ('to', 11), ('and', 11), ('of', 7), ('can', 7)] 
+
 Outdated Years Detected: [] 
 
 
 -	Why Bluetooth Earbuds Are Worse Than Normal Earbuds (Deepseek, AI)
 
 •  Analysis Results:
+
 •  Formality Score (Higher = More Formal): 13.7 
+
 •  Difficult Words Count: 105 
+
 •  Sentiment Score (-1 to 1): 0.6974 
+
 •  Generic Phrase Count: 1 
+
 •  Most Common Words: [('earbuds', 20), ('to', 15), ('and', 12), ('bluetooth', 11), ('wired', 10)] 
+
 Outdated Years Detected: [] 
 
 
 -	The Next Two Years in AI: A Look Ahead (Claude, AI)
 
 •  Analysis Results:
+
 •  Formality Score (Higher = More Formal): 17.5 
+
 •  Difficult Words Count: 145 
+
 •  Sentiment Score (-1 to 1): 0.9954 
+
 •  Generic Phrase Count: 0 
+
 •  Most Common Words: [('and', 19), ('ai', 14), ('will', 11), ('more', 10), ('the', 7)] 
+
 Outdated Years Detected: [] 
 
 
 -	5 Reasons Your Kid Should Not Have a Cell Phone (EduBirdie, Human)
 
 Analysis Results:
+
 •  Formality Score (Higher = More Formal): 9.9 
+
 •  Difficult Words Count: 131 
+
 •  Sentiment Score (-1 to 1): -0.9917 
+
 •  Generic Phrase Count: 0 
+
 •  Most Common Words: [('to', 31), ('a', 25), ('and', 22), ('the', 21), ('of', 20)] 
+
 Outdated Years Detected: [] 
 
 
 -	5 Reasons not to buy Bluetooth headphones (SoundGuys, Human)
 
 Analysis Results:
+
 •  Formality Score (Higher = More Formal): 9.5 
+
 •  Difficult Words Count: 76 
+
 •  Sentiment Score (-1 to 1): 0.9961 
+
 •  Generic Phrase Count: 0 
+
 •  Most Common Words: [('the', 22), ('a', 12), ('to', 12), ('that', 11), ('you', 10)] 
+
 Outdated Years Detected: [] 
 
 
 -	2 Years of Everyday AI: What’s Changed and Where Are We At? (Medium, Human)
 
 Analysis Results:
+
 •  Formality Score (Higher = More Formal): 11.1 
+
 •  Difficult Words Count: 132 
+
 •  Sentiment Score (-1 to 1): 0.9938 
+
 •  Generic Phrase Count: 0 
+
 •  Most Common Words: [('the', 34), ('of', 24), ('ai', 24), ('a', 23), ('to', 17)] 
+
 Outdated Years Detected: [] 
 
 
 Step 6: Reflect and Analyze
+
+
 1.	Program Performance:
 
 From the information I gathered, the program was able to differentiate AI-generated and human-made text quite well, despite some results being somewhat broken or closer than one would hope. In any case, all of the human-made text had a smaller Formality Score than the AI texts.
